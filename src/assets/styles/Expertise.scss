@@ -1,0 +1,293 @@
+.skills-container {
+  padding: 6rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  
+  h5 {
+      font-size: 1.1rem;
+      margin: 0 0 1rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      .section-icon {
+        color: rgb(43, 152, 194);
+        font-size: 1rem;
+      }
+    }
+}
+
+.skills-container h1 {
+  color: white;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgb(43, 152, 194), transparent);
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  svg {
+    color: rgb(43, 152, 194);
+  }
+
+  @media (max-width: 768px) {
+    padding: 0% 5%;
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+}
+
+.skills-container .skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); // Increased min width
+  grid-gap: 30px;
+  justify-content: center;
+  max-width: 1600px; // Allows slightly wider layout
+  padding-bottom: 50px;
+
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(2, minmax(350px, 1fr)); // Adjusted for mid-size screens
+    grid-gap: 30px;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: minmax(300px, 100%);
+    grid-gap: 60px;
+    margin-bottom: 60px;
+  }
+}
+
+.skills-container .skills-grid .skill {
+  width: 100%;
+  max-width: 500px; // Allows a wider box while keeping responsiveness
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  justify-content: space-between; /* Ensure spacing between sections */
+  align-items: flex-start; /* Align items to the left */
+  text-align: left;
+  border-radius: 20px;
+  padding: 30px;
+  color: rgba(255, 255, 255, 0.8);
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  height: 100%;
+  background-color: rgba(10, 25, 47, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  @media (max-width: 768px) {
+    padding: 30px;
+    margin: 15px 0;
+  }
+
+  .skill-header {
+    text-align: left;
+    align-self: left;
+    word-break: break-word;
+  }
+
+  p {
+    flex-grow: 1; /* Take up remaining vertical space */
+    text-align: left;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #8892b0;
+    line-height: 1.5;
+    font-size: 1.4rem;
+    font-weight: 400;
+  }
+
+  h5 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 900;
+    word-break: break-all;
+  }
+
+  .flex-chips {
+    margin-top: auto; /* Push chips to the bottom */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}
+
+.skills-container .skills-grid .skill p {
+  color: rgb(255, 255, 255);
+}
+
+.skill-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.3rem;
+
+  .skill-icon {
+    font-size: 2.5em;
+    align-items: center;
+  }
+
+  h3 {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: rgb(255, 255, 255);
+    align-items: center;
+  }
+}
+
+
+.chip {
+  color: rgb(43, 152, 194) !important;
+  background-color: rgba(43, 152, 194, 0.1) !important;
+  font-size: 0.8rem !important;
+  height: 25px !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  cursor: pointer;
+
+  span {
+    color: rgb(43, 152, 194);
+    font-family: "Montserrat", sans-serif;
+    border-radius: 15px;
+    border: 1px solid rgba(43, 152, 194, 0.2);
+    font-weight: 600;
+  }
+
+  svg {
+    height: 15px !important;
+    align-self: left;
+  }
+}
+
+.chip:hover {
+  transform: scale(1.1);
+  background-color: rgba(43, 152, 194, 0.2) !important;
+}
+
+.light-mode {
+  .skills-container h1 {
+    color: #0a192f;
+
+    &::after {
+      background: linear-gradient(90deg, transparent, rgb(43, 152, 194), transparent);
+    }
+  }
+
+  .skills-container .skills-grid .skill {
+    background-color: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #2d3748;
+
+    &:hover {
+      border-color: rgba(0, 0, 0, 0.2);
+    }
+
+    p {
+      color: rgb(34, 34, 34);
+    }
+
+    h3 {
+      color: rgb(0, 0, 0);
+    }
+
+    h5 {
+      color: black;
+      font-weight: 600;
+    }
+  }
+
+  .chip {
+    background-color: rgba(43, 152, 194, 0.1) !important;
+    border-color: rgba(43, 152, 194, 0.2);
+
+    &:hover {
+      background-color: rgba(43, 152, 194, 0.2) !important;
+    }
+  }
+}
+
+.flex-chips {
+  line-height: 2;
+  margin: 0.5;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  @media (max-width: 480px) {
+    gap: 6px;
+  }
+
+  .chip-title {
+    font-family: "Montserrat", sans-serif;
+  }
+}
+
+.flex-chips .MuiChip-root {
+  margin-right: 0.5em;
+
+  @media (max-width: 480px) {
+    margin-right: 0.3em;
+    font-size: 0.7rem !important;
+  }
+}
+
+.flex-chips .MuiChip-outlined {
+  background-color: #e0e0e0;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.flex-chips .MuiChip-outlined span {
+  color: rgb(39, 40, 34);
+}
+
+@media screen and (max-width: 768px) {
+  .skills-container {
+    display: block;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .skills-container .skills-grid {
+    display: initial;
+  }
+
+  .skills-container .skills-grid .skill {
+    padding-bottom: 5%;
+  }
+}
+
+@media (max-width: 567px) {
+  .skills {
+    font-size: 12px;
+  }
+}

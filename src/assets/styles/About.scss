@@ -1,0 +1,343 @@
+.about-section {
+  padding: 6rem 0;
+  color: rgba(255, 255, 255, 0.8);
+
+  h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgb(43, 152, 194), transparent);
+    }
+
+  }
+}
+
+.about-section2 {
+  padding: 6rem 0;
+  color: rgba(255, 255, 255, 0.8);
+
+  h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgb(43, 152, 194), transparent);
+    }
+
+    @media screen and (max-width: 768px) {
+      font-size: 2rem !important;
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.about-content {
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+  flex-direction: column;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+.about-text {
+  .intro {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    text-align: left;
+  }
+}
+
+.about-details {
+  display: grid;
+  gap: 2rem;
+  margin-bottom: 3rem;
+
+  .detail-section {
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    h3 {
+      color: rgb(43, 152, 194);
+      font-size: 1.5rem;
+      margin-top: 0rem;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      justify-content: flex-start;
+      font-weight: 600;
+
+      @media (max-width: 768px) {
+        justify-content: center;
+        display: block;
+        text-align: center;
+      }
+
+      svg {
+        color: rgb(43, 152, 194);
+      }
+    }
+
+    p {
+      color: rgba(255, 255, 255, 0.8);
+      font-weight: 500;
+      line-height: 1.6;
+      margin: 0;
+
+      @media (max-width: 768px) {
+        text-align: justify;
+        text-justify: inter-word;
+        hyphens: auto;
+      }
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        color: rgba(255, 255, 255, 0.8);
+        margin-bottom: 0.5rem;
+        padding-left: 1.5rem;
+        position: relative;
+
+        &:before {
+          content: "→";
+          color: rgb(43, 152, 194);
+          position: absolute;
+          left: 0;
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      text-align: center;
+
+      h3 {
+        text-align: center;
+      }
+    }
+  }
+}
+
+.personal-info {
+  margin: 0 auto;
+  background-color: rgba(10, 25, 47, 0.7);
+  padding: 2rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  max-width: 600px;
+  margin-bottom: 2rem;
+  margin-top: 5rem;
+  
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  span {
+    font-family: "Montserrat", sans-serif;
+  }
+
+  .info-item {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    max-width: 90%;
+
+    &:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .label {
+      flex: 0 0 120px;
+      color: rgba(255, 255, 255, 0.7);
+      font-weight: 700;
+      word-break: break-all;
+    }
+
+    .value {
+      color: rgb(43, 152, 194);
+      font-weight: 500;
+      width: 100%;
+      text-align: left;
+      word-break: break-all;
+    }
+  }
+}
+
+// Light mode styles
+.light-mode {
+  .about-section {
+    /* background: linear-gradient(#4690c2, #471e92); */
+    background-color: rgb(255, 255, 255);
+    background-image: url('../images/bg_light.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    h1 {
+      color: rgb(0, 0, 0);
+      /* text-shadow: 3px 3px #0a192f; */
+
+      &::after {
+        background: linear-gradient(90deg, transparent, rgb(43, 152, 194), transparent);
+      }
+    }
+  }
+
+  .about-section2 {
+    background: #F5F5F7;
+    color: #2d3748;
+
+    h1 {
+      color: #0a192f;
+
+      &::after {
+        background: linear-gradient(90deg, transparent, rgb(36, 136, 175), transparent);
+      }
+    }
+  }
+
+  .about-text {
+    .intro {
+      color: rgb(34, 34, 34);
+      font-size: 1.5rem;
+    }
+  }
+
+  .about-details {
+    .detail-section {
+      background-color: rgba(255, 255, 255, 0.95);
+      border: 1px solid rgba(0, 0, 0, 0.1);
+
+      &:hover {
+        border-color: rgba(0, 0, 0, 0.2);
+      }
+
+      h3 {
+        color: rgb(43, 152, 194);
+
+        svg {
+          color: rgb(43, 152, 194);
+        }
+      }
+
+      p {
+        color: rgb(110, 110, 110);
+        font-weight: 500;
+      }
+
+      ul {
+        li {
+          color: #2d3748;
+
+          &:before {
+            color: rgb(43, 152, 194);
+          }
+        }
+      }
+    }
+  }
+
+  .personal-info {
+    background-color: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+
+    &:hover {
+      border-color: rgba(0, 0, 0, 0.2);
+    }
+
+    .info-item {
+      border-bottom-color: rgba(0, 0, 0, 0.1);
+
+      .label {
+        color: #4a5568;
+      }
+
+      .value {
+        color: rgb(43, 152, 194);
+      }
+    }
+  }
+}
+
+// Responsive styles
+@media (max-width: 768px) {
+  .about-section {
+    padding: 4rem 0;
+
+    h1 {
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .about-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .about-details {
+    gap: 1.5rem;
+
+    .detail-section {
+      padding: 1.5rem;
+
+      h3 {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
